@@ -1,5 +1,52 @@
-# Vue 3 + Vite
+## Vue JS To Do List
+This application is an Vue JS To Do List. Enjoy It <3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Technology 
+
+Here are the technologies used in this project.
+
+* Vue JS
+
+## Services Used
+
+* Github
+
+
+## Getting started
+
+* Dependency
+  - npm
+
+* To run the project:
+  - npm run dev
+
+## Screens
+
+![Image](https://github.com/user-attachments/assets/75b50996-9d65-46c8-8cc3-8446a0a0b34a)
+
+
+## Features
+
+The main features of the application are:
+ - Add taks
+ - Remove tasks
+
+
+## Links
+  - Repository: https://github.com/noellepaes/todo-app
+    - In case of sensitive bugs like security vulnerabilities, please contact
+      Noellepaes12345@gmail.com directly instead of using issue tracker. We value your effort
+      to improve the security and privacy of this project!
+
+  ## Versioning
+
+  1.0.0.0
+
+
+  ## Authors
+
+  * **Noelle Paes** 
+
+  Please follow github and join us!
+  Thanks to visiting me and good coding!
