@@ -1,30 +1,31 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
+<!-- App.vue -->
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="todo-app">
+    <h1>Minhas Tasks</h1>
+    <input v-model="newTask" @keyup.enter="addTask" placeholder="Nova task" />
+    <button @click="addTask">Adicionar</button>
+    <ul>
+      <li v-for="task in tasks" :key="task.id">
+        {{ task.text }}
+        <button @click="deleteTask(task.id)">X</button>
+      </li>
+    </ul>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import { ref } from 'vue'
+
+const tasks = ref([])
+const newTask = ref('')
+
+function addTask() {
+  if (!newTask.value.trim()) return
+  tasks.value.push({ id: Date.now(), text: newTask.value.trim() })
+  newTask.value = ''
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+function deleteTask(id) {
+  tasks.value = tasks.value.filter(t => t.id !== id)
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+</script>

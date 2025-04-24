@@ -1,0 +1,115 @@
+/* 1. Variáveis de tema para fácil customização */
+:root {
+    --bg-color: #f9f9fb;           /* fundo clarinho */ 
+    --card-bg: #ffffff;            /* cartão branco */ 
+    --primary-color: #4f46e5;      /* roxo suave */ 
+    --text-color: #333333;         /* texto escuro para contraste */
+    --border-radius: 0.5rem;       /* cantos arredondados */ 
+    --shadow-small: 0px 2px 6px rgba(0,0,0,0.05), 0px 4px 12px rgba(0,0,0,0.08); /* sombra dupla */ 
+    --transition-speed: 0.2s;      /* transições suaves */ 
+  }
+  
+  /* 2. Fundo geral */
+  body {
+    background-color: var(--bg-color); /* cor de fundo clara :contentReference[oaicite:0]{index=0} */
+    font-family: Arial, sans-serif;    /* fonte neutra para legibilidade :contentReference[oaicite:1]{index=1} */
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  /* 3. Container principal com sombra e borda arredondada */
+  .todo-app {
+    background-color: var(--card-bg);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);              /* cantos suaves :contentReference[oaicite:2]{index=2} */
+    box-shadow: var(--shadow-small);                  /* sombra realista :contentReference[oaicite:3]{index=3} */
+  }
+  
+  /* 4. Cabeçalho */
+  .todo-app h1 {
+    margin-top: 0;
+    font-size: 1.75rem;                               /* tamanho legível :contentReference[oaicite:4]{index=4} */
+    letter-spacing: 0.5px;                            /* espaçamento de letras confortável :contentReference[oaicite:5]{index=5} */
+  }
+  
+  /* 5. Input e botão de adicionar */
+  .todo-app input {
+    flex: 1;
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    line-height: 1.5;                                 /* altura de linha para legibilidade :contentReference[oaicite:6]{index=6} */
+  }
+  
+  .todo-app button {
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), transform var(--transition-speed); /* transições :contentReference[oaicite:7]{index=7} */
+  }
+  
+  .todo-app button:hover {
+    background-color: #4338ca;                        /* tom mais escuro ao passar o mouse :contentReference[oaicite:8]{index=8} */
+    transform: translateY(-2px);                      /* leve elevação :contentReference[oaicite:9]{index=9} */
+  }
+  
+  /* 6. Lista de tarefas */
+  .todo-app ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  
+  .todo-app li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo-app li:last-child {
+    border-bottom: none;
+  }
+  
+  /* 7. Botão de deletar */
+  .todo-app li button {
+    background: transparent;
+    border: none;
+    color: #e11d48;                                    /* vermelho suave para ação de deletar */
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color var(--transition-speed);         /* transição de cor suave :contentReference[oaicite:10]{index=10} */
+  }
+  
+  .todo-app li button:hover {
+    color: #be123c;                                    /* tom mais forte no hover :contentReference[oaicite:11]{index=11} */
+  }
+  
+  /* 8. Estado de foco acessível */
+  input:focus, button:focus {
+    outline: 3px solid rgba(79, 70, 229, 0.4);         /* indicador de foco visível :contentReference[oaicite:12]{index=12} */
+    outline-offset: 2px;
+  }
+  
+  /* 9. Responsividade simples */
+  @media (max-width: 480px) {
+    body {
+      padding: 1rem;
+    }
+    .todo-app {
+      padding: 1rem;
+    }
+    .todo-app h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
